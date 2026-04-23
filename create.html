@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Serie</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Series Tracker</h1>
+      <nav class="top-nav">
+        <a href="index.html">Lista</a>
+        <a href="create.html" class="active">Crear serie</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel">
+        <h2 id="formTitle">Crear Serie</h2>
+        <form id="seriesForm">
+          <input type="hidden" id="seriesId" />
+          <div class="row two-col">
+            <label>
+              Nombre
+              <input id="nameInput" type="text" required />
+            </label>
+          </div>
+
+          <div class="row two-col">
+            <label>
+              Episodio actual
+              <input id="currentEpisodeInput" type="number" min="1" value="1" required />
+            </label>
+            <label>
+              Total episodios
+              <input id="totalEpisodesInput" type="number" min="1" value="1" required />
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              Subir imagen (max 1MB)
+              <input id="imageFileInput" type="file" accept="image/*" />
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn">Guardar</button>
+            <a href="index.html" class="button-link">Volver a la lista</a>
+            <button type="button" id="cancelEditBtn" class="secondary hidden">Cancelar edicion</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="create.js"></script>
+  </body>
+</html>

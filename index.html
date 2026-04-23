@@ -9,25 +9,22 @@
   <body>
     <header class="hero">
       <h1>Series Tracker</h1>
-      <p>Cliente Vanilla JS consumiendo API REST con fetch()</p>
-      <div class="api-config">
-        <label for="apiBase">API Base URL</label>
-        <input id="apiBase" type="text" value="http://localhost:8080" />
-        <button id="saveApiBtn" type="button">Guardar</button>
-      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="active">Lista</a>
+        <a href="create.html">Crear serie</a>
+      </nav>
     </header>
 
     <main class="layout">
-      <section class="panel controls">
-        <h2>Filtros</h2>
+      <section class="panel">
+        <h2>Lista de Series</h2>
         <div class="row">
-          <input id="searchInput" type="search" placeholder="Buscar por nombre..." />
+          <input id="searchInput" type="search" placeholder="Buscar por nombre" />
           <select id="sortSelect">
             <option value="id">ID</option>
             <option value="name">Nombre</option>
             <option value="current_episode">Episodio actual</option>
             <option value="total_episodes">Total episodios</option>
-            <option value="created_at">Creacion</option>
           </select>
           <select id="orderSelect">
             <option value="asc">Asc</option>
@@ -40,59 +37,14 @@
           </select>
           <button id="applyFiltersBtn" type="button">Aplicar</button>
         </div>
-      </section>
 
-      <section class="panel form-panel">
-        <h2 id="formTitle">Crear Serie</h2>
-        <form id="seriesForm">
-          <input type="hidden" id="seriesId" />
-          <div class="row two-col">
-            <label>
-              Nombre
-              <input id="nameInput" type="text" required />
-            </label>
-            <label>
-              Imagen URL
-              <input id="imageUrlInput" type="url" placeholder="https://..." />
-            </label>
-          </div>
-
-          <div class="row two-col">
-            <label>
-              Episodio actual
-              <input id="currentEpisodeInput" type="number" min="1" value="1" required />
-            </label>
-            <label>
-              Total episodios
-              <input id="totalEpisodesInput" type="number" min="1" value="1" required />
-            </label>
-          </div>
-
-          <div class="row">
-            <label>
-              Subir imagen (max 1MB)
-              <input id="imageFileInput" type="file" accept="image/*" />
-            </label>
-            <button id="uploadImageBtn" type="button">Subir Imagen</button>
-          </div>
-
-          <div class="actions">
-            <button type="submit" id="submitBtn">Guardar</button>
-            <button type="button" id="cancelEditBtn" class="secondary hidden">Cancelar edicion</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="panel">
-        <h2>Lista de Series</h2>
         <div class="table-wrapper">
           <table>
             <thead>
               <tr>
-                <th>ID</th>
                 <th>Portada</th>
                 <th>Nombre</th>
-                <th>Progreso</th>
+                <th>Episodios</th>
                 <th>Rating</th>
                 <th>Acciones</th>
               </tr>
@@ -111,15 +63,14 @@
 
     <template id="rowTemplate">
       <tr>
-        <td class="id"></td>
         <td class="cover"></td>
         <td class="name"></td>
-        <td class="progress"></td>
+        <td class="episodes"></td>
         <td class="rating"></td>
         <td class="actions"></td>
       </tr>
     </template>
 
-    <script src="app.js"></script>
+    <script src="list.js"></script>
   </body>
 </html>
