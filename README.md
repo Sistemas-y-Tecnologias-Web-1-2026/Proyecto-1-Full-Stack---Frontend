@@ -8,7 +8,8 @@ Cliente web en HTML, CSS y JavaScript vanilla (sin frameworks). Consume la API R
 Agrega aquí una captura de la app funcionando.
 
 ## Links
-- Aplicación en producción: (agregar enlace Vercel)
+- Aplicación en producción: https://proyecto-1-full-stack-frontend.vercel.app/
+- Repositorio frontend: https://github.com/Sistemas-y-Tecnologias-Web-1-2026/Proyecto-1-Full-Stack---Frontend
 - Repositorio backend: https://github.com/Sistemas-y-Tecnologias-Web-1-2026/Proyecto-1-Full-Stack---Backend
 
 ## Cómo correr el proyecto localmente
@@ -63,14 +64,25 @@ El frontend corre en un origen distinto al backend. Por eso el backend habilita 
 
 ## Challenges implementados
 
-- CRUD completo vía API REST
-- Sistema de rating
-- Subida de imagen (1MB)
-- OpenAPI/Swagger en backend
-- Códigos HTTP correctos
-- Validación server-side con errores JSON
-- Búsqueda, ordenamiento y paginación
+### API y Backend
+| Challenge | Puntos |
+|-----------|--------|
+| Spec de OpenAPI/Swagger escrita y precisa (contrato de API en YAML/JSON) | 20 |
+| Swagger UI corriendo y servido desde el backend | 20 |
+| Códigos HTTP correctos (201, 204, 404, 400, etc.) | 20 |
+| Validación server-side con respuestas de error en JSON descriptivas | 20 |
+| Paginación en `GET /series` con `?page=` y `?limit=` | 30 |
+| Búsqueda por nombre con `?q=` | 15 |
+| Ordenamiento con `?sort=` y `?order=asc|desc` | 15 |
 
-## Reflection
+### Challenges adicionales
+| Challenge | Puntos |
+|-----------|--------|
+| Sistema de rating con tabla propia en DB, endpoints REST propios y visible en cliente | 30 |
+| Subida de imágenes (máximo 1MB) | 30 |
+
+Total implementado: 200 puntos
+
+## Reflexion
 
 Vanilla JS fue suficiente para este proyecto y ayudó a entender mejor la separación entre cliente y servidor. La API permitió mantener la lógica en backend y dejar la UI enfocada solo en presentación e interacción.
