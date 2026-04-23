@@ -9,7 +9,6 @@ Agrega aquí una captura de la app funcionando.
 
 ## Links
 - Aplicación en producción: https://proyecto-1-full-stack-frontend.vercel.app/
-- Repositorio frontend: https://github.com/Sistemas-y-Tecnologias-Web-1-2026/Proyecto-1-Full-Stack---Frontend
 - Repositorio backend: https://github.com/Sistemas-y-Tecnologias-Web-1-2026/Proyecto-1-Full-Stack---Backend
 
 ## Cómo correr el proyecto localmente
