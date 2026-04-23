@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Series Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Series Tracker</h1>
+      <p>Cliente Vanilla JS consumiendo API REST con fetch()</p>
+      <div class="api-config">
+        <label for="apiBase">API Base URL</label>
+        <input id="apiBase" type="text" value="http://localhost:8080" />
+        <button id="saveApiBtn" type="button">Guardar</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel controls">
+        <h2>Filtros</h2>
+        <div class="row">
+          <input id="searchInput" type="search" placeholder="Buscar por nombre..." />
+          <select id="sortSelect">
+            <option value="id">ID</option>
+            <option value="name">Nombre</option>
+            <option value="current_episode">Episodio actual</option>
+            <option value="total_episodes">Total episodios</option>
+            <option value="created_at">Creacion</option>
+          </select>
+          <select id="orderSelect">
+            <option value="asc">Asc</option>
+            <option value="desc">Desc</option>
+          </select>
+          <select id="limitSelect">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+          </select>
+          <button id="applyFiltersBtn" type="button">Aplicar</button>
+        </div>
+      </section>
+
+      <section class="panel form-panel">
+        <h2 id="formTitle">Crear Serie</h2>
+        <form id="seriesForm">
+          <input type="hidden" id="seriesId" />
+          <div class="row two-col">
+            <label>
+              Nombre
+              <input id="nameInput" type="text" required />
+            </label>
+            <label>
+              Imagen URL
+              <input id="imageUrlInput" type="url" placeholder="https://..." />
+            </label>
+          </div>
+
+          <div class="row two-col">
+            <label>
+              Episodio actual
+              <input id="currentEpisodeInput" type="number" min="1" value="1" required />
+            </label>
+            <label>
+              Total episodios
+              <input id="totalEpisodesInput" type="number" min="1" value="1" required />
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              Subir imagen (max 1MB)
+              <input id="imageFileInput" type="file" accept="image/*" />
+            </label>
+            <button id="uploadImageBtn" type="button">Subir Imagen</button>
+          </div>
+
+          <div class="actions">
+            <button type="submit" id="submitBtn">Guardar</button>
+            <button type="button" id="cancelEditBtn" class="secondary hidden">Cancelar edicion</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Lista de Series</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Portada</th>
+                <th>Nombre</th>
+                <th>Progreso</th>
+                <th>Rating</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="seriesTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button id="prevPageBtn" type="button">Anterior</button>
+          <span id="pageInfo">Pagina 1</span>
+          <button id="nextPageBtn" type="button">Siguiente</button>
+        </div>
+      </section>
+    </main>
+
+    <template id="rowTemplate">
+      <tr>
+        <td class="id"></td>
+        <td class="cover"></td>
+        <td class="name"></td>
+        <td class="progress"></td>
+        <td class="rating"></td>
+        <td class="actions"></td>
+      </tr>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
