@@ -15,7 +15,7 @@ Cliente web en HTML, CSS y JavaScript vanilla (sin frameworks). Consume la API R
 ## Cómo correr el proyecto localmente
 
 ### Requisitos
-- Backend corriendo en: `https://proyecto-1-full-stack-backend.onrender.com`
+- Backend corriendo en: `https://proyecto-1-full-stack-backend-production.up.railway.app`
 - Un servidor estático local
 
 ### Instalación

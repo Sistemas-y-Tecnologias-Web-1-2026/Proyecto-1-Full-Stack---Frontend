@@ -1,4 +1,4 @@
-const API_BASE = "https://proyecto-1-full-stack-backend.onrender.com";
+const API_BASE = "https://proyecto-1-full-stack-backend-production.up.railway.app";
 let currentPage = 1;
 let totalPages = 1;
 
