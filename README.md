@@ -5,7 +5,8 @@ Cliente web en HTML, CSS y JavaScript vanilla (sin frameworks). Consume la API R
 ## Screenshot
 
 ### Pantalla principal
-Agrega aquí una captura de la app funcionando.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/32d455f9-f7cd-4312-bec1-9293542a5660" />
+
 
 ## Links
 - Aplicación en producción: https://proyecto-1-full-stack-frontend.vercel.app/
